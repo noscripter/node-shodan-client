@@ -1,6 +1,7 @@
 # node-shodan-client
-A Node ([node.js™](http://nodejs.org/) / [io.js](https://iojs.org/en/index.html)) library for accessing the new [SHODAN API](https://developer.shodan.io/api)**. It includes all officially supported methods (REST, Streaming and Exploits APIs). Moreover two more were added, which allow to obtain the most popular search queries.
+A Node ([node.js™](http://nodejs.org/) / [io.js](https://iojs.org/en/index.html)) library for accessing the new [Shodan API](https://developer.shodan.io/api)**. It includes all officially supported methods (REST, Streaming and Exploits APIs). Moreover two more were added, which allow to obtain the most popular search queries.
 
+NOTEBREAKING CHANGES
 ## Use
 All methods of the API need a valid key, you can get one [here](http://www.shodanhq.com/api_doc). But popular ones can be reached through RSS so no key is needed.
 
@@ -20,7 +21,7 @@ var ShodanClient = require('shodan-client'),
 shodanClient.search(searchOptions,  function (data, err) {
     console.log('\n------------------- search -------------------');
     if (err) {
-        console.log('ERROR: shodanClient.search: ' + err);
+        console.log('Error: shodanClient.search: ' + err);
     } else {
         console.log(data);
     }
@@ -29,7 +30,7 @@ shodanClient.search(searchOptions,  function (data, err) {
 shodanClient.streamBanners(function (data, err) {
     console.log('\n------------------- streamBanners -------------------');
     if (err) {
-        console.log('ERROR: shodanClient.streamBanners: ' + err);
+        console.log('Error: shodanClient.streamBanners: ' + err);
     } else {
         console.log(data);
     }
@@ -44,7 +45,7 @@ var searchOptionsExploits = {
 shodanClient.exploitSearch(searchOptionsExploits,  function (data, err) {
     console.log('\n------------------- exploitSearch -------------------');
     if (err) {
-        console.log('ERROR: shodanClient.exploitSearch: ' + err);
+        console.log('Error: shodanClient.exploitSearch: ' + err);
     } else {
         console.log(data);
     }
@@ -52,7 +53,7 @@ shodanClient.exploitSearch(searchOptionsExploits,  function (data, err) {
 
 shodanClient.profile(function (err,data) {
     if (err) {
-        console.log ("ERROR: shodanClient.profile: " + err);
+        console.log ("Error: shodanClient.profile: " + err);
     } else {
         console.log ("Profile query success. You have " + data.credits + " query credits remaining.");
     }
@@ -60,6 +61,9 @@ shodanClient.profile(function (err,data) {
 
 ```
 [**Full examples**](https://github.com/jesusprubio/node-shodan-client/tree/master/examples)
+
+## Documentation
+You can read the full API documentation in the [docs folder](./docs).
 
 ## Developer guide
 - Use [GitHub pull requests](https://help.github.com/articles/using-pull-requests).

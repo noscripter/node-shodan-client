@@ -1,14 +1,14 @@
 {
   "name": "shodan-client",
-  "version": "1.1.0",
-  "description": "A library for accessing SHODAN API, https://developer.shodan.io/api",
+  "version": "2.0.0",
+  "description": "A library for accessing Shodan API, https://developer.shodan.io/api",
   "author": {
     "name": "Jesus Perez <@jesusprubio>",
     "email": "jesusprubio gmail com",
     "url": "http://jesusprubio.name/"
   },
-  "contributors": ["https://github.com/jesusprubio/node-shodan-client/graphs/contributors"],
-  "main": "src/index.js",
+  "contributors": "https://github.com/jesusprubio/node-shodan-client/graphs/contributors",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jesusprubio/node-shodan-client/node-shodan-client.git"

@@ -1,5 +1,9 @@
 {
-    "preset": "crockford",
+  "preset": "crockford",
 
-    "excludeFiles": [ "node_modules/**" ]
+  "validateIndentation": 2,
+  "validateQuoteMarks": "'",
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+
+  "excludeFiles": [ "node_modules/**" ]
 }

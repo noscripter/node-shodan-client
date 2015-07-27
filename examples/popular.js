@@ -1,6 +1,6 @@
 /*
 
-Copyright (C) 2013, Jesus Perez <jesusprubio gmail com>
+Copyright Jesus Perez <jesusprubio gmail com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -24,29 +24,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 var util = require('util'),
 
-    ShodanClient = require('../'),
+  ShodanClient = require('../'),
 
-    options = {
-        timeout: 10000
-    },
-    shodanClient = new ShodanClient(options);
+  options = {
+    timeout: 10000
+  },
+  shodanClient = new ShodanClient(options);
 
 
-shodanClient.popular(function (err, data) {
-    console.log('\n------------------- popular -------------------');
-    if (err) {
-        console.log('ERROR: shodanClient.popular: ' + err);
-    } else {
-        console.log(util.inspect(data, { depth : 6 }));
-    }
+console.log('\n------------------- popular -------------------');
+shodanClient.popularSearch(function (err, data) {
+  if (err) {
+    console.log('Error: shodanClient.popular: ', err);
+  } else {
+    console.log(util.inspect(data, { depth: 6 }));
+  }
 });
 
 // Even they can be searched using an specific tag ("Popular tags")
-shodanClient.popularTag('voip', function (err, data) {
-    console.log('\n------------------- popular (voip tag) -------------------');
-    if (err) {
-        console.log('ERROR: shodanClient.popular: ' + err);
-    } else {
-        console.log(util.inspect(data, { depth : 6 }));
-    }
+console.log('\n------------------- popular (voip tag) -------------------');
+shodanClient.popularSearchByTag('voip', function (err, data) {
+  if (err) {
+    console.log('Error: shodanClient.popular: ', err);
+  } else {
+    console.log(util.inspect(data, { depth: 6 }));
+  }
 });

@@ -7,7 +7,9 @@
     "email": "jesusprubio gmail com",
     "url": "http://jesusprubio.name/"
   },
-  "contributors": ["https://github.com/jesusprubio/node-shodan-client/graphs/contributors"],
+  "contributors": [
+    "https://github.com/jesusprubio/node-shodan-client/graphs/contributors"
+  ],
   "main": "src/index.js",
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
   ],
   "homepage": "https://github.com/jesusprubio/node-shodan-client",
   "dependencies": {
-    "lodash": "^3.10.0",
+    "lodash": "^4.17.5",
     "request": "^2.60.0",
     "xml2js": "^0.4.9"
   },
